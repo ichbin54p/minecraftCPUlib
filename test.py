@@ -2,7 +2,7 @@ from minecraftCPUlib import CPU, Compile, Schematic
 
 cpu = CPU.OP_1(register_count=4, ram_cells=0, port_count=1, output_ports=True, simulation_speed=10)
 
-# Basic Fibb Program
+# Basic Fib Program
 
 # SETUP
 
@@ -31,6 +31,6 @@ isa = {
 
 program = Compile(cpu.get_program(), isa)
 schem = Schematic(program.to_hex(), max_x=16)
-schem.hex("fibb")
+schem.hex("fib")
 
 cpu.execute()
